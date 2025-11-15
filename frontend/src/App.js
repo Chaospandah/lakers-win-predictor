@@ -1,7 +1,7 @@
 import { useCallback, useEffect, useMemo, useState } from 'react';
 import './App.css';
 
-const BACKEND_BASE_URL = 'http://127.0.0.1:5000';
+const BACKEND_BASE_URL = 'https://lakers-win-api.onrender.com';
 
 const formatDate = (isoString) => {
   if (!isoString) return '';
@@ -36,7 +36,7 @@ function App() {
     setLoading(true);
     setError(null);
     try {
-      const response = await fetch(`${BACKEND_BASE_URL}/next-game-prediction`);
+      const response = await fetch(BACKEND_BASE_URL);
       if (!response.ok) {
         throw new Error(`Backend responded with ${response.status}`);
       }
