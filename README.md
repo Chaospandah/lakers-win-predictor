@@ -16,7 +16,7 @@ lakers-win-project/
 ```
 
 ## Backend
-- **data/**: Contains CSV files with training data
+- **data/**: Contains CSV files with training data (You'll have to do some data work on your on to make some stats)
 - **notebooks/**: Jupyter notebooks for data exploration and model training
 - **app.py**: Flask API endpoints
 
