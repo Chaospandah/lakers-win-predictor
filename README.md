@@ -1,4 +1,8 @@
-# Lakers Win Project Description
+---
+Lakers Win Project
+---
+
+# Description
 
 Hey! Thanks for checking out my project. Basically it's a machine learning project I made to predict Laker game outcomes for the 2025/2026 season. 
 I plan on adding new features to it as time goes on but right now it's somewhat bare bones. Frontent is fully vibe coded, but I plan on going back and updating it (Think NBA jam theme).
