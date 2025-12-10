@@ -18,9 +18,7 @@ from feature_builder import build_features_for_matchup
 app = Flask(__name__)
 CORS(app)
 
-# ---------------------------------------------------------------------------
 # Paths & static resources
-# ---------------------------------------------------------------------------
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 DATA_DIR = os.path.join(BASE_DIR, "data")
 
@@ -55,9 +53,8 @@ else:
     print(f"Warning: Rolling dataset not found at {ROLLING_DATA_PATH}")
 
 
-# ---------------------------------------------------------------------------
+
 # Helpers
-# ---------------------------------------------------------------------------
 def _prepare_feature_array(raw_features) -> np.ndarray:
     """Validate and order incoming features, returning the scaled array."""
     if feature_columns:
@@ -143,9 +140,8 @@ def find_next_lakers_game(max_days_ahead: int = 30):
     raise RuntimeError("No upcoming Lakers game found in next 30 days.")
 
 
-# ---------------------------------------------------------------------------
+
 # Routes
-# ---------------------------------------------------------------------------
 @app.route("/")
 def index():
     return jsonify({"status": "ok", "message": "Lakers win predictor backend running"}), 200
